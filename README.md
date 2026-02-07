@@ -5,7 +5,10 @@ LMDB-backed task tracker with priorities, dependencies, conflict detection, and 
 ## Install
 
 ```bash
-pip install -e .
+# Recommended: installs CLI globally
+pipx install jari
+# or
+uv tool install jari
 ```
 
 ## Quick Start
