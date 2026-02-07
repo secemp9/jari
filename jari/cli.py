@@ -82,6 +82,7 @@ examples:
     parser.add_argument('--file', default=None, help='Read content from file')
     parser.add_argument('--stdin', action='store_true', help='Read content from stdin')
 
+
     args = parser.parse_args()
 
     # Help

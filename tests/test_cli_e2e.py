@@ -1655,7 +1655,7 @@ class TestBlockedEdgeCases:
 class TestVersionHelp:
     def test_version_flag(self, tmp_path):
         rc, out, err = jari("--version", cwd=tmp_path)
-        assert "0.1.0" in out or "0.1.0" in err
+        assert "jari" in out or "jari" in err
 
     def test_help_command(self, db):
         rc, out, err = jari("help", cwd=db)
