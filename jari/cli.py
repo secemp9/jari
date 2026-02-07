@@ -78,6 +78,7 @@ examples:
     parser.add_argument('--parent', default=None, help='Parent todo ID (for epics)')
     parser.add_argument('--output', default=None, help='Output file path')
     parser.add_argument('--remove', action='store_true', help='Remove hook configuration')
+    parser.add_argument('--global', action='store_true', dest='global_hooks', help='Install hooks globally (~/.claude/settings.json)')
     parser.add_argument('--hook-event', default=None, help='Hook event name (internal)')
     parser.add_argument('--file', default=None, help='Read content from file')
     parser.add_argument('--stdin', action='store_true', help='Read content from stdin')
@@ -101,7 +102,10 @@ examples:
 
         target = args.args[0].lower()
         if target == 'claude':
-            project_dir = os.getcwd()
+            if args.global_hooks:
+                project_dir = str(Path.home())
+            else:
+                project_dir = os.getcwd()
             success, message = setup_claude_hooks(project_dir, remove=args.remove)
             if success:
                 if args.remove:
