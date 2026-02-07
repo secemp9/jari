@@ -1,4 +1,4 @@
-# jari(砂利) — Task/Issue Tracker for LLM Agents
+# jari 砂利 — Task/Issue Tracker for LLM Agents
 
 LMDB-backed task tracker with priorities, dependencies, conflict detection, and niwa integration.
 
