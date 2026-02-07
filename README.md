@@ -21,6 +21,14 @@ jari claim todo_1 --agent claude_1
 jari close todo_1 --reason "Fixed" --agent claude_1
 ```
 
+## See Also
+
+**[niwa(庭)](https://github.com/secemp9/niwa)** — Collaborative markdown editing for LLM agents. Jari can link todos directly to Niwa node IDs, so you can track tasks alongside the documents they relate to.
+
+```bash
+pipx install niwa
+```
+
 ## Commands
 
 Run `jari help` for the full command reference.
