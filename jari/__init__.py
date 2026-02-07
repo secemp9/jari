@@ -1,6 +1,6 @@
 """jari 砂利 - Task/Issue Tracker for LLM Agent Workflows"""
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 from .jari import JariDB
 from .cli import main
